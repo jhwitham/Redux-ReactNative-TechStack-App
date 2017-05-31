@@ -10,7 +10,11 @@ class ListItem extends Component {
 
     if (expanded) {
       return (
-        <Text>{library.description}</Text>
+        <CardSection>
+          <Text style={{ flex: 1 }} style={styles.descriptionStyle}>
+            {library.description}
+          </Text>
+        </CardSection>
       );
     }
   }
@@ -40,6 +44,9 @@ const styles = {
   titleStyle: {
     fontSize: 18,
     paddingLeft: 15
+  },
+  descriptionStyle: {
+    paddingLeft: 10
   }
 };
 
